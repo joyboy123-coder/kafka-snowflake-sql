@@ -1,0 +1,10 @@
+# Kafka library for real-time data streaming
+kafka-python
+
+# Snowflake connector with Pandas support for write_pandas
+snowflake-connector-python[pandas]
+
+# Pandas for handling data efficiently
+pandas
+
+
