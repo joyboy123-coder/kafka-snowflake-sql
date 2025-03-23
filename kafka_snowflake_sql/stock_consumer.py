@@ -13,7 +13,6 @@ logger = setup_logger("consumer", "logs/consumer.log")
 # Snowflake Connection
 conn = snowflake.connector.connect(**SNOWFLAKE_CONFIG)
 cursor = conn.cursor()
-cursor.execute(f"USE DATABASE {SNOWFLAKE_CONFIG['database']}; USE SCHEMA {SNOWFLAKE_CONFIG['schema']};")
 
 # Kafka Consumer
 consumer = KafkaConsumer(
@@ -36,9 +35,9 @@ for message in consumer:
         success, nchunks, nrows, _ = write_pandas(conn, df, "YOUR_TABLE",auto_create_table = True)
 
         if success:
-            logger.info(f"✅ Inserted {nrows} records into Snowflake")
+            logger.info(f" Inserted {nrows} records into Snowflake")
         else:
-            logger.error("❌ Failed to insert data")
+            logger.error("Failed to insert data")
 
         data_list = []  # Reset list
 

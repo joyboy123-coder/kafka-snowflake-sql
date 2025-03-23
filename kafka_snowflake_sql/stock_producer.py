@@ -24,6 +24,6 @@ while True:
     }
     
     producer.send(KAFKA_CONFIG["topic"], stock_data)
-    logger.info(f"📤 Sent: {stock_data}")
+    logger.info(f"Sent: {stock_data}")
 
     time.sleep(2)  # Simulating real-time data
