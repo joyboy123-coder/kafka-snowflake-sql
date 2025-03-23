@@ -3,6 +3,6 @@ SNOWFLAKE_CONFIG = {
     "password" : "your_password",
     "account" : "your_snowflake_account",
     "warehouse" : "your_warehouse",
-    "database" : "your_database"
+    "database" : "your_database",
     "schema" : "your_schema" 
     }
