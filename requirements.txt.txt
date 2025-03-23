@@ -6,5 +6,3 @@ snowflake-connector-python[pandas]
 
 # Pandas for handling data efficiently
 pandas
-
-
