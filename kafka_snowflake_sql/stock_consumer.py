@@ -28,7 +28,7 @@ for message in consumer:
     data = message.value
     data_list.append(data)
 
-    if len(data_list) >= 500:  # Insert every 5 records
+    if len(data_list) >= 500:  # Insert every 500 records
         df = pd.DataFrame(data_list)
         df.columns = df.columns.str.upper()
         # Use write_pandas to load DataFrame into Snowflake
